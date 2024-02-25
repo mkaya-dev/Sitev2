@@ -4,15 +4,16 @@ import AltNavbar from '../Component/AltNavbar';
 
  const KayitOl = () => {
   return (
-    <><br/>
+    <>
+        <br/>
         <Navbar/><br/><br/><br/><br/><br/><br/>
         <div className='profil'><br/>
             <div className='profil_ic'>
-            <h6 style={{textAlign:"center",color:"#DA0C81"}}>MK.app'e<br/> Hoşgeldiniz</h6><br/>
-            <input style={{height:50,width:250,marginLeft:20,outline:"none"}} type='text' placeholder='Kullanıcı Adı' /><br/><br/>
-            <input style={{height:50,width:250,marginLeft:20,outline:"none"}} type="email" placeholder='E-posta Adresi' /><br/><br/>
-            <input style={{height:50,width:250,marginLeft:20,outline:"none"}} type="password" placeholder='Şifre ' /><br/><br/>
-            <button style={{height:50,width:250,marginLeft:20,outline:"none"}}  className='buttonProfil btn btn-light'>Kayıt Ol</button>
+              <h6 style={{textAlign:"center",color:"#DA0C81"}}>MK.app'e<br/> Hoşgeldiniz</h6><br/>
+              <input style={{height:50,width:250,marginLeft:20,outline:"none"}} type='text' placeholder='Kullanıcı Adı' /><br/><br/>
+              <input style={{height:50,width:250,marginLeft:20,outline:"none"}} type="email" placeholder='E-posta Adresi' /><br/><br/>
+              <input style={{height:50,width:250,marginLeft:20,outline:"none"}} type="password" placeholder='Şifre ' /><br/><br/>
+              <button style={{height:50,width:250,marginLeft:20,outline:"none"}}  className='buttonProfil btn btn-light'>Kayıt Ol</button>
             </div>
         </div>
         <AltNavbar/><br/><br/><br/><br/><br/>
@@ -38,10 +39,10 @@ import AltNavbar from '../Component/AltNavbar';
                             <button className='btn btn-dark'><i class="fa-brands fa-discord"></i></button>
                             <button className='btn btn-dark'><i class="fa-brands fa-linkedin-in"></i></button>
                             <button className='btn btn-dark'><i class="fa-brands fa-x-twitter"></i></button>
-
-                    </div>
-                </div>
+                      </div>
+                  </div>
             </div>
+       </div>
     </>
   )
 }
