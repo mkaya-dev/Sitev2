@@ -6,7 +6,7 @@ import Detail from './Pages/Detail';
 import Ricky from './Pages/Ricky';
 import RickyDetail from './Pages/RickyDetail';
 import Galeri from './Pages/Galeri';
-import KayıtOl from './Pages/KayıtOl';
+import KayitOl from './Pages/KayitOl';
 
  function App() {
   return (
@@ -18,7 +18,7 @@ import KayıtOl from './Pages/KayıtOl';
       <Route path='/Ricky' element={<Ricky/>} />
       <Route path='/Ricky/RickyDetail/:id' element={<RickyDetail/>} />
       <Route path='/Galeri' element={<Galeri/>} />
-      <Route path='/KayıtOl' element={<KayıtOl/>} />
+      <Route path='/KayitOl' element={<KayitOl/>} />
     </Routes>
     </BrowserRouter>
   )
