@@ -11,5 +11,5 @@ Amacım, HTML, CSS ve JavaScript'te becerilerimi ilerletmekti. API'lardan veri �
 - Bootstrap
 
 ### Proje Linkleri:
-- Canlı Demo: [`https://mkaya-xbox.netlify.app/`](https://mkaya-xbox.netlify.app/)
-- [![Netlify Status](https://api.netlify.com/api/v1/badges/5516b1c3-4b3b-4787-9f46-b38b85b4e0bc/deploy-status)](https://app.netlify.com/sites/mkaya-xbox/deploys)
+- Canlı Demo: [`https://mkaya-site.netlify.app/`](https://mkaya-site.netlify.app/)
+- [![Netlify Status](https://api.netlify.com/api/v1/badges/919ea32c-ee8d-438f-acc8-7135f7fe1b96/deploy-status)](https://app.netlify.com/sites/mkaya-site/deploys)
