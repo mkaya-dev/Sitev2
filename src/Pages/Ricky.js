@@ -5,10 +5,8 @@ import AltNavbar from '../Component/AltNavbar';
 import { useNavigate } from 'react-router-dom';
 
  const Ricky = () => {
-
-    const RickyDetay=useNavigate()
-
-    const [rick,setRicky]=useState([])
+    const navigate = useNavigate();
+    const [rick,setRicky]=useState([]);
 
     useEffect(()=>{
         const api_link="https://rickandmortyapi.com/api/character"
@@ -16,9 +14,7 @@ import { useNavigate } from 'react-router-dom';
         .then(response=>{
             setRicky(response.data)
         })
-    },[])
-
-    console.log(rick,"rick");
+    },[]);
 
   return (
     <><br/>
@@ -27,7 +23,7 @@ import { useNavigate } from 'react-router-dom';
              <div className="sol btn-group-vertical" role="group" aria-label="Vertical button group">
                 {
                     rick.results?.map((liste, i) =>
-                        <button onClick={()=>RickyDetay(`/Ricky/RickyDetail/${liste.id}`)} key={i} style={{textAlign:"left"}} type="button" class="btn btn-dark">
+                        <button onClick={() => navigate(`/Ricky/RickyDetail/${liste.id}`)} key={i} style={{textAlign:"left"}} type="button" class="btn btn-dark">
                             {liste.name}
                         </button>
                     )
@@ -65,14 +61,10 @@ import { useNavigate } from 'react-router-dom';
                             <button className='btn btn-dark'><i class="fa-brands fa-discord"></i></button>
                             <button className='btn btn-dark'><i class="fa-brands fa-linkedin-in"></i></button>
                             <button className='btn btn-dark'><i class="fa-brands fa-x-twitter"></i></button>
-
-
                         </div>
                     </div>
                 </div>
             </div>
-
-    
     </>
   )
 }
