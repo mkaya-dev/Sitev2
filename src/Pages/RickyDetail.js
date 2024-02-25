@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from '../Component/Navbar';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import AltNavbar from '../Component/AltNavbar';
 
 const RickyDetail = () => {
-
+    const navigate = useNavigate();
     let { id } = useParams()
     const [detay, setDetay] = useState([])
 
@@ -15,19 +15,12 @@ const RickyDetail = () => {
             .then(response => {
                 setDetay(response.data)
             })
-    }, [id])
-
-
-    const Ricky=()=>{
-        window.location="/Ricky"
-    }
-
-    console.log(detay,"detay");
+    }, [id]);
 
     return (
         <><br/>
             <Navbar /><br/><br/><br/><br/><br/><br/>
-            <button onClick={Ricky} className='btn btn-danger'>Geri</button>
+            <button onClick={() => navigate('/Ricky')} className='btn btn-danger'>Geri</button>
             <table class="table table-dark">
                 <thead>
                     <tr>
@@ -73,15 +66,10 @@ const RickyDetail = () => {
                             <button className='btn btn-dark'><i class="fa-brands fa-discord"></i></button>
                             <button className='btn btn-dark'><i class="fa-brands fa-linkedin-in"></i></button>
                             <button className='btn btn-dark'><i class="fa-brands fa-x-twitter"></i></button>
-
-
                         </div>
                     </div>
                 </div>
             </div>
-
-
-
         </>
     )
 }
