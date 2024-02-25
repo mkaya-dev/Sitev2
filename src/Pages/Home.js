@@ -13,10 +13,7 @@ import { useNavigate } from 'react-router-dom'
 
 
 const Home = () => {
-
-    const login=useNavigate()
-    
-
+    const navigate = useNavigate()
 
     return (
         <><br />
@@ -67,7 +64,7 @@ const Home = () => {
                     <h2 style={{ fontSize: 60, padding: 100 }}>Geliştiriciler için Tasarlandı,<br /> İleri Teknolojiler İçin Üretildi</h2>
                 </div>
                 <div style={{ padding: 60, marginTop: 60 }} className='sag'>
-                    <button onClick={()=>login("/KayıtOl")} className='button7 btn btn-light'>Ücretsiz Başlayın</button><br /><br />
+                    <button onClick={() => navigate("/KayıtOl")} className='button7 btn btn-light'>Ücretsiz Başlayın</button><br /><br />
                     <button className='button8 btn btn-light'>Dokümanları okuyun</button>
                 </div>
 
