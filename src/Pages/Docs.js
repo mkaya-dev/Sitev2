@@ -8,7 +8,7 @@ import AltNavbar from '../Component/AltNavbar';
 
 const Docs = () => {
     const [karakter, setKarakter] = useState([])
-    const IdAtama=useNavigate()
+    const navigate = useNavigate();
 
     useEffect(() => {
         const api_link = "https://api.disneyapi.dev/character"
@@ -18,10 +18,6 @@ const Docs = () => {
             })
     }, [])
 
-    console.log(karakter, "karakter");
-
-
-
     return (
         <><br />
             <Navbar /><br /><br /><br /><br/>
@@ -29,7 +25,7 @@ const Docs = () => {
             <div className="sol btn-group-vertical" role="group" aria-label="Vertical button group">
                 {
                     karakter.data?.map((liste, i) =>
-                        <button key={i} onClick={()=>IdAtama(`/Docs/Detail/${liste._id}`)} style={{textAlign:"left"}} type="button" class="btn btn-dark">
+                        <button key={i} onClick={() => navigate(`/Docs/Detail/${liste._id}`)} style={{textAlign:"left"}} type="button" class="btn btn-dark">
                             {liste.name}
                         </button>
                     )
@@ -67,24 +63,10 @@ const Docs = () => {
                             <button className='btn btn-dark'><i class="fa-brands fa-discord"></i></button>
                             <button className='btn btn-dark'><i class="fa-brands fa-linkedin-in"></i></button>
                             <button className='btn btn-dark'><i class="fa-brands fa-x-twitter"></i></button>
-
-
                         </div>
                     </div>
                 </div>
             </div>
-
-           
-
-
-
-
-
-
-
-
-
-
         </>
     )
 }
