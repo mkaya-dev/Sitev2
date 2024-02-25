@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../Component/Navbar';
 import AltNavbar from '../Component/AltNavbar';
 
- const KayıtOl = () => {
+ const KayitOl = () => {
   return (
     <><br/>
         <Navbar/><br/><br/><br/><br/><br/><br/>
@@ -39,15 +39,11 @@ import AltNavbar from '../Component/AltNavbar';
                             <button className='btn btn-dark'><i class="fa-brands fa-linkedin-in"></i></button>
                             <button className='btn btn-dark'><i class="fa-brands fa-x-twitter"></i></button>
 
-
-                        </div>
                     </div>
                 </div>
             </div>
-    
-    
     </>
   )
 }
 
-export default KayıtOl;
+export default KayitOl;
