@@ -1,33 +1,26 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import Navbar from '../Component/Navbar';
 import AltNavbar from '../Component/AltNavbar';
 import "./All.css"
 
 const Detail = () => {
-    let { _id } = useParams()
-
+    let { _id } = useParams();
     const [detay, setDetay] = useState([])
-
+    const navigate = useNavigate();
     useEffect(() => {
         const api_link = `https://api.disneyapi.dev/character/${_id}`
         axios.get(api_link)
             .then(response => {
                 setDetay(response.data)
             })
-    }, [_id])
+    }, [_id]);
 
-    const Disnay=()=>{
-        window.location="/Docs"
-    }
-
-
-    console.log(detay, "detay");
     return (
         <><br />
             <Navbar /><br/><br/><br/><br/><br/><br/>
-            <button onClick={Disnay} className='btn btn-danger'>Geri</button>
+            <button onClick={() => navigate('/Docs')} className='btn btn-danger'>Geri</button>
 
             <table class="table table-dark">
                 <thead>
@@ -73,17 +66,10 @@ const Detail = () => {
                             <button className='btn btn-dark'><i class="fa-brands fa-discord"></i></button>
                             <button className='btn btn-dark'><i class="fa-brands fa-linkedin-in"></i></button>
                             <button className='btn btn-dark'><i class="fa-brands fa-x-twitter"></i></button>
-                            
-                            
-
-
                         </div>
-                       
                     </div>
                 </div>
             </div>
-
-
         </>
     )
 }
