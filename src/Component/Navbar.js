@@ -8,7 +8,7 @@ const Navbar = () => {
     return (
         <>
          <nav className='arkaplanNav'>
-            <h3 style={{cursor:"pointer"}} onClick={()=>Home("/")} className='logo'>MK.app</h3>
+            <h3 style={{cursor:"pointer"}} onClick={() => navigate('/')} className='logo'>MK.app</h3>
             <ul>
                 <li onClick={() => navigate('Docs')}>Disnay Dökümanları</li>
                 <li onClick={() => navigate('Ricky')}>Rick ve Morty Bilgileri</li>
