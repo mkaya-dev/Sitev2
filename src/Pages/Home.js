@@ -9,9 +9,6 @@ import kırmızı from "../Images/k3.png"
 import AltNavbar from '../Component/AltNavbar';
 import { useNavigate } from 'react-router-dom'
 
-
-
-
 const Home = () => {
     const navigate = useNavigate()
 
