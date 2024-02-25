@@ -16,9 +16,6 @@ const Galeri = () => {
             })
     }, [])
 
-    console.log(resim, "resim");
-
-
    useEffect(()=>{
     const api_Link="https://rickandmortyapi.com/api/character"
     axios.get(api_Link)
@@ -26,11 +23,6 @@ const Galeri = () => {
         setRiky(response.data)
     })
    },[])
-
-   console.log(riky,"asas");
-
-    
-
 
     return (
         <><br />
@@ -41,7 +33,6 @@ const Galeri = () => {
                         <img key={i} src={re.imageUrl} />
                     )
                 }
-
 
                 {
                     riky.results?.map((rez,i)=>
@@ -82,8 +73,6 @@ const Galeri = () => {
                     </div>
                 </div>
             </div>
-
-
         </>
     )
 }
